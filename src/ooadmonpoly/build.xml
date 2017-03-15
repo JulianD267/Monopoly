@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project basedir="." default="build">
+	<path id="build.classpath">
+		<pathelement location="classes"/>
+	</path>
+	<target name="init">
+		<mkdir dir="classes"/>
+	</target>
+	<target name="clean">
+		<delete dir="classes"/>
+	</target>
+	<target depends="init" name="build">
+		<javac srcdir="." destdir="classes" source="1.5" target="1.5" fork="yes">
+			<classpath refid="build.classpath"/>
+			<include name="Bahnhof.java"/>
+			<include name="Hotel.java"/>
+			<include name="Haus.java"/>
+			<include name="Strasse.java"/>
+			<include name="Versorger.java"/>
+			<include name="Ereigniskarten.java"/>
+			<include name="Ereignisfeld.java"/>
+			<include name="Ereignisstapel.java"/>
+			<include name="Kartenstapel.java"/>
+			<include name="Gemeinschaftkarten.java"/>
+			<include name="Gemeinschaftsstapel.java"/>
+			<include name="Gemeinschaftsfeld.java"/>
+			<include name="Zusatzsteuer.java"/>
+			<include name="Start.java"/>
+			<include name="Frei_Parken.java"/>
+			<include name="Gefaengnis.java"/>
+			<include name="ins_Gefaengnis.java"/>
+			<include name="Spieler.java"/>
+			<include name="Spielfigur.java"/>
+			<include name="Feld.java"/>
+			<include name="Brett.java"/>
+			<include name="MonopolySpiel.java"/>
+			<include name="Würfel.java"/>
+		</javac>
+	</target>
+</project>
